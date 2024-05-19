@@ -1,0 +1,215 @@
+
+
+/* Reset some default styling */body {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  overflow-x:hidden ;
+  font-family:'Times New Roman', Times, serif;
+ /* background-image: url("D:/React/my-app/public/images/weather.jpg");
+ background-size:cover; */
+ background-color: #dfdbdb;
+
+
+
+}
+
+
+.logo1{
+  height: 40px;
+  margin-left: 0;
+}
+
+.card-text{
+  --max-lines:1;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: var(--max-lines); 
+} 
+
+
+.head {
+  border-radius: 50%;
+  background: rgb(2, 138, 43);
+  color: #fff;
+  padding: 10px;
+  margin-left: 10px;
+  text-align: center;
+  width: 75px;
+  height: 75px;
+  border: solid 1px transparent;
+
+}
+.butt{
+  margin-top: 50px;
+  margin-bottom:0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.scrolling-container {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin-top:60px;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #d1d7d8;
+
+}
+.scrolling-text {
+  margin: 30px;
+  animation: scroll 10s linear infinite;
+  font-size: 20px;
+  animation-play-state: running;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(700%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.thumb{
+  display: flex;
+  justify-content: center; /* Horizontally center items */
+  align-items: center; /* Vertically center items */
+  margin: 10px;
+  justify-content:space-evenly;
+}
+.liked {
+  animation: pop-like 0.3s ease-in-out, color-change 1s ease-in-out; /* Add color-change animation */
+}
+
+@keyframes pop-like {
+  0% {
+      transform: scale(1);
+      opacity: 1;
+  }
+  50% {
+      transform: scale(0.5); /* Adjust the scale value */
+      opacity: 0.5;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+@keyframes color-change {
+  0% {
+      color: inherit;
+  }
+  100% {
+      color: blue;
+  }
+}
+
+.disliked {
+  animation: pop-like 0.3s ease-in-out, color-change 1s ease-in-out; /* Add color-change animation */
+}
+
+@keyframes pop-like {
+  0% {
+      transform: scale(1);
+      opacity: 1;
+  }
+  50% {
+      transform: scale(0.5); /* Adjust the scale value */
+      opacity: 0.5;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+@keyframes color-change {
+  0% {
+      color: inherit;
+  }
+  100% {
+      color: blue;
+  }
+}
+
+.result-box {
+  padding-left: 10px;
+  position: absolute;
+  top: 100%;
+  width: 50%; /* Set to 100% width to match the width of the input */
+  max-width: 220px; /* Set a maximum width for the result box */
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+.result-box ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.result-box li {
+  padding: 5px 10px;
+  cursor: pointer;
+  /* Your result item styles */
+}
+.result-box ul a{
+  text-decoration: none;
+}
+/* Add this CSS to your stylesheet */
+.blur {
+  filter: blur(8px); /* You can adjust the blur amount as needed */
+  opacity: 0.7; /* Adjust the opacity for the desired level of blur effect */
+  pointer-events: none; /* Disable pointer events on blurred elements to prevent interaction */
+  transition: filter 0.3s ease, opacity 0.3s ease; /* Add a transition effect for a smoother blur appearance */
+}
+
+/* Style for the disabled buttons */
+.blur[disabled] {
+  cursor: not-allowed; /* Change cursor to 'not-allowed' when disabled */
+}
+.sign{
+  text-align: center;
+  align-items: center;
+}
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .nav-item {
+    margin-right: 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .search-box {
+    margin: 10px 0;
+    order: 1; /* Change the order to move the search box below the navigation links */
+  }
+  .scrolling-text{
+  animation: scroll 15s linear infinite;
+  }
+  
+}
+
+
+
+/* Styles for the signup button (adjust as needed) */
+.signup-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signup-button:hover {
+  background-color: #0056b3;
+}
